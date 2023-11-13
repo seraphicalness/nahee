@@ -25,7 +25,18 @@ func main() {
 
 	test := [3]string{"inha", "go", "student"}
 	testS := test[:2]
-	fmt.Println(test, len(test))   // [inha go student] 3
-	fmt.Println(testS, len(testS)) // [inha go] 2
+	testS2 := test[1:]
+
+	testS2[0] = "python"
+	// 역방향 인덱싱은 X, [-2] -> X
+
+	// 전부 다 바뀜
+	// 	[inha python student] 3
+	// [inha python] 2
+	// [python student] 2
+
+	fmt.Println(test, len(test))     // [inha go student] 3
+	fmt.Println(testS, len(testS))   // [inha go] 2
+	fmt.Println(testS2, len(testS2)) // [go student] 2
 
 }
